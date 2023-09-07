@@ -1,0 +1,9 @@
+.section {
+  &.section-view-bill {
+    .card-body {
+      .btn-bill {
+        border: 1px solid $primary !important;
+      }
+    }
+  }
+}

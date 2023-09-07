@@ -1,0 +1,136 @@
+$step-progress-size:                    51px;
+$step-progress-separator-color:         gray('400');
+$step-progress-separator-height:        1px;
+$step-progress-box-shadow:              0 0 0 3px gray('200');
+$step-progress-todo-bg-color:           color('white');
+$step-progress-todo-color:              gray('400');
+$step-progress-doing-bg-color:          theme-color('info');
+$step-progress-doing-color:             color('white');                
+$step-progress-done-bg-color:           theme-color('primary');
+$step-progress-done-color:              color('white');
+$step-progress-color:                   theme-color('info');
+$step-progress-em-font-weight:          $font-weight-bold;
+$step-progress-em-font-size:            26px;
+$step-progress-span-margin-top:         20px;
+
+
+$step-progress-item-types: (
+  'todo':   $step-progress-todo-bg-color $step-progress-todo-color,
+  'doing':  $step-progress-doing-bg-color $step-progress-doing-color, 
+  'done':   $step-progress-done-bg-color $step-progress-done-color
+);
+
+$step-progress-bg-color-sm:             theme-color('info');
+$step-progress-color-sm:                color('white');
+$step-progress-line-height-sm:          38px;
+$step-progress-padding-sm:              0 22px;
+
+.step {
+  position: relative;
+  margin-bottom: 40px;
+  @include media-breakpoint-up('md') {
+    .step-progress {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      > li {
+        flex: 1;
+        position: relative;
+        @each $type, $items in $step-progress-item-types {
+          &.step-progress-item--#{$type} {
+            em {
+              background-color: nth($items, 1);
+              color: nth($items, 2);
+            }
+          }
+        }
+        * {
+          display: block;
+        }
+        &:not(:last-of-type) {
+          &::after {
+            z-index: 1;
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            top: $step-progress-size / 2;
+            height: $step-progress-separator-height;
+            background-color: $step-progress-separator-color;
+          }
+        }
+        &:not(:first-of-type) {
+          &::before {
+            z-index: 1;
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 50%;
+            top: $step-progress-size / 2;
+            height: $step-progress-separator-height;
+            background-color: $step-progress-separator-color;
+          }
+        }
+        > em {
+          position: relative;
+          z-index: 2;
+          margin: auto;
+          display: block;
+          font-style: normal;
+          font-size: $step-progress-em-font-size;
+          font-weight: $step-progress-em-font-weight;
+          width: $step-progress-size;
+          height: $step-progress-size;
+          border-radius: $step-progress-size / 2;
+          box-shadow: $step-progress-box-shadow;
+          text-align: center;
+          line-height: $step-progress-size;
+          background-color: $white;
+          > .step-progress-item-count {
+            display: none;
+          }
+        }
+        > span {
+          display: block;
+          font-size: 18px;
+          font-weight: $font-weight-semibold;
+          margin: $step-progress-span-margin-top auto auto auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  @include media-breakpoint-down('sm') {
+    .step-progress {
+      background-color: $step-progress-bg-color-sm;
+      color: $step-progress-color-sm;
+      line-height: $step-progress-line-height-sm;
+      padding: $step-progress-padding-sm;
+      margin: 0;
+      > li {
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+        &.step-progress-item--done, &.step-progress-item--todo {
+          display: none;
+        }
+        em {
+          float: right;
+          font-style: normal;
+          > .step-progress-item-index {
+            &::before {
+              content: ' Step ';
+            }
+          }
+          > .step-progress-item-count {
+            &::before {
+              content: ' Of ';
+            }
+          }
+        }
+      }
+    }
+  }
+}

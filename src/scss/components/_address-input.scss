@@ -1,0 +1,17 @@
+.address-input {
+  display: block !important;
+  width: 100%;
+  input {
+    width: 100%;
+    min-height: 49px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: $font-weight-semibold;
+    color: rgba($info, 0.8);
+    padding: 10px 12px;
+    &::placeholder {
+      color: rgba($info, 0.5);
+      font-weight: $font-weight-semibold;
+    }
+  }
+}

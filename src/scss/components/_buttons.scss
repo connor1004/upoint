@@ -1,0 +1,113 @@
+.btn {
+  letter-spacing: .7px;
+}
+.btn-link {
+  color: $info;
+  &:hover {
+    color: rgba($info, .8);
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+    @include box-shadow(none !important);
+  }
+}
+
+.btn-round {
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: $font-weight-extrabold;
+}
+
+.btn-has-char {
+  position: relative;
+  &::after {
+    position: relative;
+    margin-left: 5px;
+    font-size: 34px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.btn-has-char-plus {
+  width: 200px;
+  &::after {
+    content: "+";
+    position: relative;
+  }
+}
+
+.btn-has-char-chevron {
+  position: relative;
+  &::after {
+    content: "›";
+  }
+}
+
+@each $key, $value in $theme-colors {
+  .btn-has-char-#{$key} {
+    &::after {
+      color: $value !important;
+    }
+  }
+}
+
+.btn-checkbox {
+  background-color: $component-active-color;
+  border-color: $gray-300;
+  color: color-yiq($component-active-color);
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  &.checked {
+    background-color: $component-active-bg;
+    border-collapse: $component-active-bg;
+    color: color-yiq($component-active-bg);
+    
+    .icon-svg {
+      border: 1px solid $component-active-color;
+    }
+  }
+  .btn-checkbox-inner {
+    display: flex;
+    align-items: center;
+  }
+  .btn-checkbox-content {
+    flex: 1;
+  }
+  .icon-svg {
+    display: block;
+    border-radius: 50px;
+    border: 1px solid $gray-400;
+    position: relative;
+    padding: 2px;
+    margin-right: 10px;
+    background-color: $component-active-color;
+    color: $primary;
+    svg {
+      vertical-align: top;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+  &:hover {
+    .icon-svg {
+      border-color: $component-active-color;
+    }
+  }
+}
+
+.bg-secondary {
+  .btn-white {
+    color: $secondary;
+    background-color: $white !important;
+    border-color: $white !important;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

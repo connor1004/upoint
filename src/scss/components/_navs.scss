@@ -1,0 +1,50 @@
+.menu-nav {
+  display: block;
+  padding: 0;
+  background-color: $body-bg;
+  border-radius: 5px;
+  margin-right: 18px;
+  @include media-breakpoint-down('md') {
+    margin: 0;
+    max-width: 360px;
+  }
+  @include box-shadow($box-shadow);
+  li {
+    a {
+      text-decoration: none;
+      display: block;
+      font-weight: $font-weight-semibold;
+      padding: 13px 23px;
+      color: $body-color;
+      font-size: 17px;
+      &:hover {
+        color: lighten($info, 10%);
+      }
+       border-radius: 5px;
+    }
+  }
+  li {
+    a {
+      &.active {
+        background-color: $component-active-bg;
+        color: $component-active-color;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+@each $key, $color in $theme-colors {
+  .menu-nav-#{$key} {
+    $text-color: color-yiq($color);
+    li {
+      a {
+        &.active {
+          background-color: $color;
+          color: $text-color;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+}

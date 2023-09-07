@@ -1,0 +1,119 @@
+.credit-card {
+  height: 100%;
+  background-size: cover;
+  background-position: top right;
+  min-height: 200px;
+  color: $white;
+  .btn-link {
+    color: $white;
+    font-weight: $font-weight-extrabold;
+    &:hover {
+      color: rgba($white, .8);
+    }
+  }
+
+  .card-footer {
+    padding-top: 0;
+  }
+  .card-title {
+    font-weight: $font-weight-extrabold;
+    line-height: 1;
+    vertical-align: baseline;
+    * {
+      font-weight: $font-weight-extrabold;
+      line-height: 1;
+      vertical-align: baseline;
+    }
+    margin-bottom: 11px;
+  }
+  .card-text {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.42px;
+    font-weight: $font-weight-semibold;
+  }
+  .price {
+    .value {
+      font-size: 42px;
+    }
+    .unit {
+      vertical-align: super;
+      font-size: 22px;
+    }
+  }
+  .percentage {
+    .value {
+      font-size: 54px;
+    }
+    .unit {
+      vertical-align: super;
+      font-size: 27px;
+    }
+  }
+  .capacity {
+    .value {
+      font-size: 54px;
+    }
+    .unit {
+      vertical-align: baseline;
+      font-size: 34px;
+    }
+  }
+  
+  h2 {
+    font-size: 34px;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  h4 {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+  h5 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  h6 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  
+  &.credit-card-light {
+    color: $info;
+    .btn-link {
+      color: $info;
+      &:hover {
+        color: rgba($info, .8);
+      }
+    }
+  }
+
+  &.mobile-credit-card {
+    >.badge {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 9px 9px 9px 15px;
+      border-radius: 8px 0 0 8px;
+    }
+    .price {
+      .value {
+        font-size: 34px;
+      }
+      .unit {
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+  &.upoint-nbn-credit-card {
+    .badge {
+      padding: 16px;
+    }
+  }
+}
+

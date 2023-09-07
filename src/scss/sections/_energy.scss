@@ -1,0 +1,15 @@
+.section-energy {
+  padding-top: 45px;
+  padding-bottom: 113px;
+  @include media-breakpoint-down('md') {
+    padding-bottom: 45px;
+    .bill-price-card {
+      max-width: 100% !important;
+    }
+  }
+  .bill-price-card {
+    max-width: 456px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

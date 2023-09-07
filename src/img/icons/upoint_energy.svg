@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" ic="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 23 34" style="enable-background:new 0 0 23 34;" xml:space="preserve">
+<title>upoint-energy</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<g transform="translate(-263.000000, -899.000000)">
+		<g ic="upoint-energy" transform="translate(263.000000, 899.000000)">
+			<g>
+			</g>
+			<defs>
+				<filter ic="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="22.681" height="34.028">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="22.681" height="34.028" ic="mask-2_1_">
+				<g style="filter:url(#Adobe_OpacityMaskFilter);">
+					<polygon ic="path-1_1_" style="fill-rule:evenodd;clip-rule:evenodd;fill:#00B687;" points="0,0 22.68,0 22.68,34.027 
+						0,34.027"/>
+				</g>
+			</mask>
+			<path ic="Fill-1" class="fill" style="mask:url(#mask-2_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B687;" d="M7.41,1.5
+				c-0.412,0-0.772,0.266-0.89,0.664L1.538,18.786c-0.084,0.28-0.03,0.588,0.144,0.822c0.176,0.232,0.454,0.374,0.748,0.374h4.528
+				c0.242,0,0.468,0.116,0.608,0.31c0.142,0.196,0.18,0.448,0.104,0.676L4.236,31.304c-0.14,0.426,0.042,0.89,0.436,1.108
+				c0.382,0.21,0.89,0.112,1.166-0.224L20.97,13.766c0.228-0.276,0.276-0.664,0.124-0.988c-0.152-0.324-0.484-0.532-0.842-0.532
+				h-5.84c-0.252,0-0.486-0.126-0.626-0.336c-0.138-0.21-0.164-0.476-0.066-0.706l3.562-8.412c0.122-0.288,0.09-0.616-0.08-0.876
+				C17.028,1.656,16.738,1.5,16.426,1.5H7.41z M5.118,34.028c-0.408,0-0.812-0.106-1.17-0.302c-1.028-0.568-1.504-1.784-1.134-2.894
+				l3.106-9.35H2.43c-0.764,0-1.494-0.366-1.952-0.98c-0.454-0.612-0.596-1.416-0.376-2.148l4.98-16.622C5.396,0.696,6.332,0,7.41,0
+				h9.016c0.814,0,1.572,0.406,2.026,1.088c0.45,0.68,0.528,1.536,0.212,2.288l-3.12,7.37h4.708c0.936,0,1.798,0.546,2.198,1.39
+				c0.4,0.846,0.272,1.86-0.32,2.582L6.998,33.14C6.536,33.704,5.85,34.028,5.118,34.028z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,14 @@
+.custom-text {
+  position: relative;
+  .custom-input {
+    padding-right: 40px;
+  }
+  .custom-label {
+    color: $text-muted;
+    position: absolute;
+    line-height: ($input-padding-x * 2) + ($input-font-size * $input-line-height) - 3px;
+    top: -5px;
+    font-weight: $font-weight-semibold;
+    right: $input-padding-x;
+  }
+}

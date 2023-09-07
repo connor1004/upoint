@@ -1,0 +1,103 @@
+$section-padding-y:                   74px;
+$section-padding-y-sm:                27px;
+
+$section-triangle-width:              64px;
+$section-triangle-width-sm:           32px;
+
+$section-title-max-width:             925px;
+
+$section-item-margin-bottom:          44px;
+$section-item-margin-bottom-sm:       22px;
+
+$section-hero-padding-y:             154px;
+$section-hero-padding-y-sm:          64px;
+
+$section-hero-mini-padding-y:        58px;
+
+$section-hero-cover-size:            1200px;
+$section-hero-cover-size-md:         1000px;
+$section-hero-cover-size-sm:         500px;
+
+.section {
+  position: relative;
+  &.has-triangle-left {
+    &::after {
+      position: absolute;
+      content: "";
+      top: -60px;
+      left: 0;
+      width: 0; 
+      height: 0; 
+      border-top: 60px solid transparent;
+      border-bottom: 60px solid transparent; 
+      border-left: 60px solid $primary;
+    }
+  }
+  &.has-triangle-right {
+    &::after {
+      position: absolute;
+      content: "";
+      top: -60px;
+      right: 0;
+      width: 0; 
+      height: 0; 
+      border-top: 60px solid transparent;
+      border-bottom: 60px solid transparent; 
+      border-right: 60px solid $primary;
+    }
+  }
+  .section-title {
+    text-align: center;
+    max-width: $section-title-max-width;
+    margin: auto;
+  }
+  
+  .section-item {
+    &:not(:last-child) {
+      margin-bottom: $section-item-margin-bottom;
+      @include media-breakpoint-down('md') {
+        margin-bottom: $section-item-margin-bottom-sm;
+      }
+    }
+  }
+  &.section-hero-mini {
+    background-position: center;
+    padding: $section-hero-mini-padding-y 0;
+  }
+  padding: $section-padding-y-sm 0;
+  @include media-breakpoint-up('sm') {
+    padding: $section-padding-y 0;
+  }
+  &.section-top {
+    .container {
+      margin-top: -$section-padding-y-sm - 50px;
+      @include media-breakpoint-up('sm') {
+        margin-top: -$section-padding-y - 50px;
+      }
+    }
+  }
+  &.section-secondary {
+    background-color: theme-color('secondary');
+  }
+  &.section-default {
+    background-color: theme-color('white');
+  }
+  &.section-info {
+    background-color: theme-color('info');
+    color: color('white');
+    [class*='btn-outline'] {
+      color: color('white') !important;
+    }
+  }
+}
+
+.nav-transparent {
+  .section {
+    &.section-hero {
+      padding-top: $section-hero-padding-y - 48px;
+      @include media-breakpoint-down('sm') {
+        padding-top: $section-hero-padding-y-sm * 1.5;
+      }
+    }
+  }
+}

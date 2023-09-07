@@ -1,0 +1,17 @@
+
+.bg-maze {
+  position: relative;
+  &::before {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 2800px 2800px;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('../img/backgrounds/maze.png');
+    opacity: 0.5;
+  }
+}

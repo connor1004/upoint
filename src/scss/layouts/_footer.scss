@@ -1,0 +1,66 @@
+.site-footer {
+  background-color: $primary;
+  color: $yiq-text-light;
+  a {
+    color: $white;
+    transition: 0.3s all;
+    &:hover {
+      color: rgba($white, 0.8);
+      text-decoration: underline;
+    }
+  }
+
+  &.site-footer-intro {
+    padding: 34px 0 30px;
+  }
+  &.site-footer-main {
+    @include media-breakpoint-up('lg') {
+      padding: 72px 0 59px;
+    }
+    @include media-breakpoint-down('md') {
+      padding: 48px 0;
+    }
+    .footer-brand {
+      @include media-breakpoint-up('lg') {
+        margin-bottom: 36px;
+      }
+      @include media-breakpoint-down('md') {
+        margin-bottom: 24px;
+      }
+    }
+    .footer-menu {
+      width: 100%;
+      
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      a {
+        line-height: 40px;
+      }
+      @include media-breakpoint-up('lg') {
+        columns: 3;
+      }
+      @include media-breakpoint-down('md') {
+        columns: 2;
+      }
+      @include media-breakpoint-down('sm') {
+        margin-bottom: 36px;
+      }
+    }
+    .social-menu {
+      display: flex;
+      @include media-breakpoint-up('lg') {
+        margin-bottom: 36px;
+      }
+      @include media-breakpoint-down('md') {
+        margin-bottom: 24px;
+      }
+      li:not(:last-child) {
+        margin-right: 20px;
+      }
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+}

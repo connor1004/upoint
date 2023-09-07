@@ -1,0 +1,25 @@
+@each $type, $color in $theme-colors {
+  .modal-#{$type} {
+    .modal-header {
+      border-top: 4px solid $color;
+    }
+  }
+}
+
+.modal-header, .modal-footer {
+  display: block;
+}
+
+.modal-body {
+  @include media-breakpoint-down('md') {
+    padding: 1rem;
+  }
+}
+
+.modal-footer {
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.modal-lg {
+  max-width: 970px;
+}

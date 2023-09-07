@@ -1,0 +1,43 @@
+.section-payment-details {
+  .card-body {
+    padding: 0;
+    
+    .outer-row {
+      margin: 0;
+
+      .card-col {
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-container {
+          width: 280px;
+          height: 150px;
+          border-radius: 10px;
+          background-color: $gray-300;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .form-col {
+        padding: 40px;
+
+        /*.pay-by-select {
+          font-size: 1em;
+          padding: 10px 36px 10px 16px;
+          height: 44px;
+          border-radius: 0;
+        }*/
+        .form-control {
+          border-radius: 0;
+
+        }
+      }
+    }
+  }
+}

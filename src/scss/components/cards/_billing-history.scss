@@ -1,0 +1,45 @@
+.card-billing-history {
+  border-radius: 0;
+  .card-header {
+    border-radius: 0;
+    background-color: $primary;
+    color: $white;
+    padding: 24px 56px;
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+  }
+  .table {
+    thead {
+      th {
+        border-bottom: none;
+        &:first-child {
+          @include media-breakpoint-down('md') {
+            width: auto !important;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          vertical-align: middle;
+          @include media-breakpoint-down('md') {
+            padding: 12px 0;
+            .btn {
+              white-space: nowrap;
+              padding: 4px 10px;
+              margin-right: 10px;
+            }
+          }
+          &:first-child {
+            @include media-breakpoint-down('md') {
+              span {
+                font-size: $font-size-base !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+$pricing-card-selected-mark-size: 49px;
+.price-card {
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  .card-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .card-text {
+      font-size: 20px;
+      font-weight: $font-weight-semibold;
+      line-height: 25px;
+    }
+    border-radius: 4px 4px 0 0;
+  }
+  .card-body {
+    padding: 0;
+    .price-card-main {
+      padding: 15px 20px 30px 20px;
+      .price {
+        font-weight: $font-weight-black;
+        .unit {
+          vertical-align: top;
+          font-size: 34px;
+          line-height: 50px;
+        }
+        .value {
+          vertical-align: top;
+          font-size: 74px;
+          line-height: 74px;
+          letter-spacing: -1.03px;
+        }
+      }
+      .period {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+      }
+      .description {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .summary {
+        margin-top: 15px;
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+    }
+    .price-card-capacities {
+      .price-card-item {
+        border-top: 1px solid $border-color;
+        padding: 20px;
+        .main {
+          font-weight: $font-weight-extrabold;
+          .amount {
+            font-size: 38px;
+            letter-spacing: -0.55px;
+            line-height: 46px;
+          }
+          .unit, .label {
+            font-size: 28px;
+            letter-spacing: -0.41px;
+            line-height: 33px;
+            &::after {
+              content: ' '
+            }
+          }
+        }
+        .details {
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+    .price-card-features {
+      .price-card-item {
+        border-top: 1px solid $border-color;
+        padding: 20px;
+        .main {
+          font-weight: $font-weight-bold;
+          letter-spacing: -0.23px;
+          line-height: 19px;
+        }
+        .details {
+          letter-spacing: -0.23px;
+          line-height: 19px;
+          margin-top: 8px;
+        }
+      }
+      padding-bottom: 15px;
+    }
+  }
+  &.pricing-card-disabled {
+    opacity: 0.5;
+  }
+  &.pricing-card-selected {
+    &::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: -20px;
+      width: $pricing-card-selected-mark-size;
+      height: $pricing-card-selected-mark-size;
+      border-radius: $pricing-card-selected-mark-size;
+      background-color: theme-color('info');
+      color: color('white');
+      background-image: url('../img/icons/check-white.svg') !important;
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.bill-price-card {
+  border-radius: 0;
+  .card-header {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 0;
+  }
+  .card-body {
+    .btn {
+      margin-bottom: -25px;
+      padding: 13px 36.5px;
+    }
+    .price-card-main {
+      .price {
+        .unit {
+          font-size: 70px;
+          line-height: 70px;
+        }
+        .value {
+          font-size: 70px;
+          line-height: 70px;
+          position: relative;
+          &:after {
+            position: absolute;
+            content: "*";
+            font-size: 70px;
+            right: -30px;
+            top: 5px;
+          }
+        }
+      }
+    }
+    .price-card-features {
+      .price-card-item {
+        .main {
+          font-size: 18px;
+          font-weight: $font-weight-bold;
+        }
+        .details {
+          font-size: 18px;
+          padding: 0 60px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

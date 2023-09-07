@@ -1,0 +1,77 @@
+.form-card {
+  border-top: 3px solid $primary;
+  border-radius: 0;
+  margin-bottom: 42px;
+  @each $key, $color in $theme-colors {
+    .border-#{$key} {
+      border-top: 3px solid $color;
+    }
+  }
+  .card-header {
+    border-radius: 0;
+    background-color: $primary;
+    color: color-yiq($primary);
+  }
+  @each $key, $color in $theme-colors {
+    .card-#{$key} {
+      border-top: 2px solid $color;
+      .card-header {
+        background-color: $color;
+        color: color-yiq($color);
+      }
+    }
+  }
+  .card-footer {
+    background-color: $white;
+  }
+  .card-body {
+    background-color: $white;
+    .card {
+      .card-body {
+        background-color: transparent;
+      }
+    }
+    &.card-stack {
+      box-shadow: inset 0 20px 20px -20px rgba($gray-400, 0.35);
+    }
+  }
+  &.card-payment {
+    .card-body, .card-action {
+      padding: 45px 56px;
+      @include media-breakpoint-down('md') {
+        padding: 20px;
+      }
+      .form-group {
+        label {
+          color: $primary;
+          margin-bottom: 8px;
+          font-weight: $font-weight-bold;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .form-group {
+    margin-bottom: 42px;
+  }
+  .happen-item {
+    display: flex;
+    .circle-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      font-weight: $font-weight-extrabold;
+      color: $white;
+      border-radius: 50px;
+      background-color: $primary;
+      margin-right: 24px;
+    }
+    margin-bottom: 32px;
+    .content {
+      width: 79%;
+    }
+  }
+}

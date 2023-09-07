@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 98 93" style="enable-background:new 0 0 98 93;" xml:space="preserve">
+<title>cutting-out</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<g transform="translate(12.000000, -4.000000)">
+		<g transform="translate(-12.000000, 2.000000)">
+			<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M65.156,62.334v27.739h-4.74v4.498h37.08v-4.498
+				h-4.104V62.334H65.156z M73.018,72.508h12.513v-3.917H73.018V72.508z M74.992,90.073h8.564V76.113h-8.564V90.073z"/>
+			<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M4.739,62.334v27.739h-4.74v4.498h37.08v-4.498
+				h-4.106V62.334H4.739z M12.601,72.508h12.511v-3.917H12.601V72.508z M14.575,90.073h8.562V76.113h-8.562V90.073z"/>
+			<g transform="translate(0.000000, 0.970080)">
+				<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M51.208,7.202V1.43h-4.869v5.75
+					c-5.744,1.111-10.084,6.178-10.084,12.271h24.899C61.153,13.409,56.884,8.366,51.208,7.202"/>
+				<g>
+				</g>
+				<defs>
+					<filter filterUnits="userSpaceOnUse" x="23.377" y="21.413" width="50.8" height="72.187">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="23.377" y="21.413" width="50.8" height="72.187">
+					<g style="filter:url(#Adobe_OpacityMaskFilter);">
+						<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" points="0,93.6 97.496,93.6 97.496,1.43 
+							0,1.43 						"/>
+					</g>
+				</mask>
+				<path style="mask:url(#mask-2_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M55.872,83.419h4.546
+					V43.354h-4.546V83.419z M46.43,83.419h4.546V43.354H46.43V83.419z M36.989,83.419h4.546V43.354h-4.546V83.419z M39.635,28.642
+					h18.283V25.2H39.635V28.642z M66.592,88.474V35.966h-5.445V21.413H36.406v14.554h-5.443v52.507h-7.587V93.6h50.8v-5.126H66.592z
+					"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,42 @@
+.card {
+  // height: 100%;
+  @include box-shadow($box-shadow);
+  .card-title {
+    font-size: 26px;
+    font-weight: $font-weight-extrabold;
+  }
+  .card-header {
+    padding: 18px 24px;
+    .card-title {
+      margin-bottom: 0;
+    }
+  }
+  >.table-responsive {
+    .table {
+      margin-bottom: 0;  
+    }
+  }
+  >.table {
+    margin-bottom: 0;
+  }
+  .card-body-p-xl {
+    @include media-breakpoint-up('md') {
+      padding: 48px;
+    }
+    @include media-breakpoint-up('lg') {
+      padding: 96px 68px 48px 68px;
+    }
+    @include media-breakpoint-up('xl') {
+      padding: 112px 96px 68px 96px;
+    }
+  }
+  .card-body-p-lg {
+    @include media-breakpoint-up('lg') {
+      padding: 68px;
+    }
+    @include media-breakpoint-up('md') {
+      padding: 40px;
+    }
+  }
+  margin-bottom: 30px;
+}

@@ -1,0 +1,190 @@
+$pack-font-size:                      1.25rem;
+$pack-padding-y:                      48px;
+$pack-padding-x:                      0px;
+
+$pack-icon-size:                      ('width': 75px, 'height': 100px);
+
+$pack-title-font-size:                1.875rem;
+$pack-title-font-weight:              $font-weight-bold;
+$pack-title-margin-top:               35px;
+$pack-title-margin-bottom:            8px;
+
+$pack-description-max-width:          290px;
+
+.pack-card {
+  text-align: center;
+  font-size: $pack-font-size;
+  font-weight: $font-weight-light;
+  padding: $pack-padding-y $pack-padding-x;
+
+  .pack-icon {
+    img {
+      margin: auto;
+      width: map-get($pack-icon-size, 'width');
+      height: map-get($pack-icon-size, 'height');
+    }
+  }
+  .pack-title {
+    font-size: $pack-title-font-size;
+    font-weight: $pack-title-font-weight;
+    margin-top: $pack-title-margin-top;
+    margin-bottom: $pack-title-margin-bottom;
+  }
+  .pack-description {
+    max-width: $pack-description-max-width;
+    margin: auto;
+  }
+  &.pack-primary {
+    color: theme-color('color-primary');
+  }
+  @each $type, $color in $theme-colors {
+    &.pack-#{$type} {
+      .pack-title {
+        color: $color;
+      }
+    }
+  }
+}
+
+$pack-horizontal-padding-y:                      24px;
+$pack-horizontal-padding-x:                      0px;
+
+$pack-horizontal-icon-height:                    72px;
+$pack-horizontal-icon-margin-right:              25px;
+$pack-horizontal-title-margin-top:               0;
+$pack-horizontal-title-font-size:                1.5rem;
+$pack-horizontal-title-color:                    theme-color('primary');
+$pack-horizontal-description-font-size:          1rem;
+$pack-horizontal-description-margin-top:         10px;
+
+
+.pack-card.pack-horizontal {
+  padding: $pack-horizontal-padding-y $pack-horizontal-padding-x;
+  text-align: left;
+   display: flex;
+   .pack-icon {
+     margin-right: $pack-horizontal-icon-margin-right;
+     img {
+       width: auto;
+       height: $pack-horizontal-icon-height;
+     }
+   }
+   .pack-title {
+     margin-top: $pack-horizontal-title-margin-top;
+     font-size: $pack-horizontal-title-font-size;
+     color: $pack-horizontal-title-color;
+   }
+   .pack-description {
+     max-width: 100%;
+     font-size: $pack-horizontal-description-font-size;
+     margin-top: $pack-horizontal-description-margin-top;
+   }
+ }
+
+$pack-vertical-icon-height:                          368px;
+$pack-vertical-title-margin-top:                     0;
+$pack-vertical-title-font-size:                      1.5rem;
+$pack-vertical-title-color:                          theme-color('primary');
+.pack-card.pack-vertical {
+  padding: 0;
+  .pack-icon {
+    img {
+      width: auto;
+      height: $pack-vertical-icon-height;
+    }
+  }
+  .pack-title {
+    margin-top: $pack-vertical-title-margin-top;
+    font-size: $pack-vertical-title-font-size;
+    color: $pack-vertical-title-color;
+  }
+}
+
+
+$pack-round-size:                              258px;
+
+$pack-round-border-radius:                     258px;
+$pack-round-border-radius-sm:                  5px;
+
+$pack-round-icon-height:                       103px;
+$pack-round-bg-color:                        rgba(22, 67, 119, 0.2);
+
+$pack-round-margin:                            28px;
+$pack-round-margin-sm:                         10px 0;
+
+$pack-round-padding-sm:                        20px;
+
+$pack-round-title-margin-top:                  26px;
+$pack-round-title-font-size:                   1.125rem;
+$pack-round-title-font-weight:                 $font-weight-semibold;
+$pack-round-selected-mark-size:                49px;
+$pack-round-selected-mark-bg-color:            theme-color('info');
+$pack-round-selected-mark-color:               color('white');
+
+.pack-card.pack-round {
+  cursor: pointer;
+  position: relative;
+  width: $pack-round-size;
+  height: $pack-round-size;
+  border-radius: $pack-round-border-radius;
+  background-color: $pack-round-bg-color;
+  margin: $pack-round-margin;
+  @include media-breakpoint-down('sm') {
+    margin: $pack-round-margin-sm;
+    border-radius: $pack-round-border-radius-sm;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: $pack-round-padding-sm;
+    height: auto;
+  }
+  .pack-icon {
+    img {
+      width: $pack-round-icon-height;
+      width: auto;
+    }
+  }
+  .card-content {
+    @include media-breakpoint-down('sm') {
+      flex: 1;
+    }
+  }
+  .pack-title {
+    @include media-breakpoint-up('sm') {
+      margin-top: $pack-round-title-margin-top;
+    }
+    @include media-breakpoint-down('sm') {
+      margin-top: 0;
+    }
+    font-size: $pack-round-title-font-size;
+    font-weight: $pack-round-title-font-weight;
+  }
+  &.pack-disabled {
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+    background-color: transparent;
+    opacity: 0.5;
+  }
+  &.pack-selected {
+    &::after {
+      content: ''; 
+      position: absolute;
+      top: 0;
+      right: 13%;
+      width: $pack-round-selected-mark-size;
+      height: $pack-round-selected-mark-size;
+      border-radius: $pack-round-selected-mark-size;
+      background-color: $pack-round-selected-mark-bg-color;
+      color: $pack-round-selected-mark-color;
+      background-image: url('../img/icons/check-white.svg') !important;
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include media-breakpoint-down('sm') {
+        right: -$pack-round-selected-mark-size / 4;
+        top: -$pack-round-selected-mark-size / 4;
+      }
+    }
+  }
+}

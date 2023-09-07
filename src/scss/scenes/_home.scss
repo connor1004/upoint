@@ -1,0 +1,112 @@
+.page-home {
+  .slick-home-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .slick-item {
+      height: 696px;
+      background-position: center;
+      background-size: cover;
+    }
+    .slick-dots {
+      bottom: 25px;
+    }
+  }
+  .section {
+    &.section-hero {
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: color('white');
+      padding: 214px 0 !important;
+      .slick-dots {
+        margin-bottom: 30px;
+      }
+      a {
+        color: color('white');
+        font-weight: $font-weight-bold;
+      }
+      padding: $section-hero-padding-y 0;
+      @include media-breakpoint-down('sm') {
+        padding: $section-hero-padding-y-sm 0;
+      }
+      .container {
+        position: relative;
+      }
+      .hero-hint {
+        text-align: center;
+        z-index: 2002;
+        max-width: 540px;
+        position: relative;
+        margin-top: 20px;
+        @include media-breakpoint-down('md'){
+          text-align: left;
+        }
+        .btn {
+          font-size: 1.875rem;
+          border: 1px solid $white;
+        }
+      }
+      .hero-title {
+        position: relative;
+        z-index: 2002;
+        display: block;
+        font-size: 2rem;
+        font-weight: $font-weight-bold;
+        max-width: 575px;
+        @include media-breakpoint-up('md') {
+          font-size: 2.5rem;
+        }
+        @include media-breakpoint-up('lg') {
+          font-size: 3.5rem;
+        }
+      }
+      .hero-icon {
+        display: inline-block;
+        width: 63px;
+        height: 55px;
+        margin-right: 20px;
+      }
+      .hero-description {
+        position: relative;
+        z-index: 2002;
+        display: block;
+        font-size: $h5-font-size;
+        max-width: 540px;
+      }
+      .cover {
+        display: block;
+        z-index: 2001;
+        position: absolute;
+        width: $section-hero-cover-size;
+        height: $section-hero-cover-size;
+        top: -48px;
+        left: 0;
+        background-color: theme-color('primary');
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: center;
+        @include media-breakpoint-down('md') {
+          width: $section-hero-cover-size-md;
+          height: $section-hero-cover-size-md;
+        }
+        @include media-breakpoint-down('sm') {
+          width: $section-hero-cover-size-sm;
+          height: $section-hero-cover-size-sm;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('../img/backgrounds/maze.png');
+          background-size: 2600px 2600px;
+          background-position: -50%;
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+}

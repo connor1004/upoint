@@ -1,0 +1,67 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.site-main {
+  @include media-breakpoint-up('sm') {
+    font-size: 18px;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+b {
+  font-weight: $font-weight-extrabold;
+}
+
+label {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  letter-spacing: 0.44px;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+@each $type, $color in $theme-colors {
+  .title-underlined-#{$type} {
+    position: relative;
+    padding-bottom: 23px;
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 23px;
+      width: 50px;
+      height: 2px;
+      background-color: $color;
+    }
+  }
+  .title-underlined-center {
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .title-underlined-right {
+    &::after {
+      margin-left: auto;
+    }
+  }
+}
+
+.outer-row {
+  margin: 0 !important;
+}
+
+.title-responsive {
+  @include media-breakpoint-down('md') {
+    font-size: $h3-font-size;
+  }
+}

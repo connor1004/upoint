@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" ic="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 29 35" style="enable-background:new 0 0 29 35;" xml:space="preserve">
+<title>upoint-mobile</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<g transform="translate(-259.000000, -899.000000)">
+		<g ic="Group-8" transform="translate(239.000000, 887.000000)">
+			<g ic="upoint-mobile" transform="translate(20.000000, 12.000000)">
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;" d="M26.929,8.14l-6.792-6.792
+					c-0.31-0.308-0.728-0.482-1.166-0.482H2.513c-0.91,0-1.646,0.736-1.646,1.646v29.184c0,0.908,0.736,1.646,1.646,1.646h23.252
+					c0.908,0,1.646-0.738,1.646-1.646V9.304C27.411,8.868,27.237,8.448,26.929,8.14z"/>
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;" d="M20.855,28.001c0,0.73-0.596,1.328-1.326,1.328
+					H6.179c-0.73,0-1.328-0.598-1.328-1.328v-16.83c0-0.73,0.598-1.328,1.328-1.328h13.35c0.73,0,1.328,0.598,1.328,1.328
+					L20.855,28.001z"/>
+				<polyline class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;stroke-linejoin:round;" points="20.855,22.533 
+					9.723,22.533 9.723,29.329 				"/>
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;stroke-linejoin:round;" d="M4.851,16.64h16.006"/>
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;stroke-linejoin:round;" d="M15.984,22.533v6.796"/>
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;stroke-linejoin:round;" d="M9.722,9.843v6.796"/>
+				<path class="stroke" style="fill:none;stroke:#FFFFFF;stroke-width:1.73;stroke-linejoin:round;" d="M15.984,9.843v6.796"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

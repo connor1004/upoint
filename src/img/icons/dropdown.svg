@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="9px" viewBox="0 0 18 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Input-dark" transform="translate(-393.000000, -61.000000)" fill="#318BF4">
+            <g id="Icon/dropdown" transform="translate(393.000000, 61.000000)">
+                <polygon id="Dropdown" points="0.0743291472 0.0635041618 8.67388332 8.66305834 17.2734375 0.0635041618"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

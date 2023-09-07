@@ -1,0 +1,44 @@
+.energy-card {
+  background-color: #24B389ff;
+  padding: 64px 90px;
+  margin-bottom: 62px;
+  &:before {
+    opacity: 0.1;
+  }
+  .card-body {
+    padding: 0;
+    position: relative;
+    .icon-svg {
+      width: 124px !important;
+      height: 124px !important;
+      margin-bottom: 32px;
+    }
+    .card-title {
+      color: $white;
+      font-size: 30px;
+      font-weight: $font-weight-semibold;
+      text-align: center;
+      line-height: 40px;
+    }
+    padding-bottom: 8px;
+    .btn {
+      background-color: #1E9271;
+      border-color: #1E9271;
+      padding: 16px 45px;
+      &:hover {
+        background-color: darken(#1E9271, 2);
+      }
+    }
+  }
+  @include media-breakpoint-down('sm') {
+    padding: 30px 20px !important;
+  }
+  &.confirm-state {
+    .card-title {
+      font-size: 34px;
+      font-weight: $font-weight-bold;
+      letter-spacing: 0.94px;
+      line-height: 25px;
+    }
+  }
+}

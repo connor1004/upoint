@@ -1,0 +1,206 @@
+$social-menu-item-padding-horizontal: 32px;
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  &.menu-social {
+    li {
+      display: inline-block;
+      &:not(:last-of-type) {
+        margin-right: $social-menu-item-padding-horizontal;
+      }
+      a {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        &.menu-item-circle {
+          display: inline-block;
+          font-size: 1rem;
+          border-radius: 50%;
+          background-color: white;
+          color: inherit;
+        }
+      }
+    }
+  }
+  &.menu-services {
+    li {
+      padding: 0 0 10px 0;
+      a {
+        display: block;
+        font-weight: $font-weight-semibold;
+        font-size: 1rem;
+        line-height: 1rem;
+        display: block;
+        padding: 15px 20px;
+        color: #2D609B;
+        text-decoration: none;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: 1px solid rgba(gray('400'), 0.35);
+          border-radius: 6px;
+        }
+        
+        border-radius: 6px;
+        position: relative;
+        &.active, &:hover {
+          &:before {
+            border: 2px solid $primary;
+            box-shadow: $box-shadow-sm;
+          }
+        }
+
+        &.active {
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid $primary;
+          }
+        }
+      }
+    }
+  }
+  &.menu-side {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: $white;
+    border-radius: 5px;
+    @include box-shadow($box-shadow);
+    li {
+      a {
+        text-decoration: none;
+        display: block;
+        font-weight: $font-weight-semibold;
+        padding: 10px 20px;
+        color: $info;
+        &:hover {
+          color: lighten($info, 10%);
+        }
+         border-radius: 5px;
+      }
+    }
+    @each $type, $bg-color in $theme-colors {
+      $color: contrasting-color($bg-color, $body-bg, $body-color);
+      &.menu-side-#{$type} {
+        li {
+          a {
+            &.active {
+              background-color: $bg-color;
+              color: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.menu-tabs {
+    border-radius: 5px;
+    position: relative;
+    z-index: 1002;
+    padding: 26px 23px;
+    background-color: $white;
+    @include box-shadow($box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      a {
+        background-color: #F9F8F7;
+        width: 100%;
+        font-weight: $font-weight-semibold;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 29px;
+        color: $dark;
+        text-decoration: none;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 6px;
+        }
+        border-radius: 5px;
+        position: relative;
+        @each $type, $bg-color in $theme-colors {
+          $color: $white;
+          &.menu-item-#{$type} {
+            &.active {
+              background-color: $bg-color;
+              color: $color;
+              &:after {
+                border-top-color: $bg-color;
+              }
+              .menu-icon {
+                svg {
+                  .stroke {
+                    stroke: $color !important;
+                  }
+                  .fill {
+                    fill: $color !important;
+                  }
+                }
+              }
+            }
+            .menu-icon {
+              svg {
+                .stroke {
+                  stroke: $bg-color !important;
+                }
+                .fill {
+                  fill: $bg-color !important;
+                }
+              }
+            }
+          }
+        }
+        .menu-icon {
+          svg {
+            width: 42px;
+            height: 42px;
+          }
+          margin-right: 20px;
+        }
+        &.active {
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -13px;
+            left: 50%;
+            margin-left: -13px;
+            width: 0;
+            height: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 13px 0 13px;
+            border-color: $primary transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}

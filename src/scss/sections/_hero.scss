@@ -1,0 +1,57 @@
+.section {
+  &.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    display: flex;
+    align-items: center;
+    .hero-title {
+      display: flex;
+      align-items: center;
+      .hero-icon {
+        display: block;
+        margin-right: 22px;
+        min-width: 63px;
+        max-width: 63px;
+        height: 55px;
+        border-radius: 4px 0 0 4px;
+        padding: 12px;
+        @include media-breakpoint-down('sm') {
+          min-width: 50px;
+          max-width: 50px;
+          height: 45px;
+          padding: 8px;
+          margin-right: 10px; 
+        }
+        .icon-svg {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+      .entry-title {
+        margin-bottom: 0;
+        flex: 1;
+        font-weight: $font-weight-bold;
+        font-size: 50px;
+        @include media-breakpoint-down('md') {
+          font-size: 40px;
+        }
+        @include media-breakpoint-down('sm') {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  &.campaign-hero-section {
+    @include media-breakpoint-up('lg') {
+      height: 549px;
+    }
+    @include media-breakpoint-down('md') {
+      height: 300px;
+    }
+  }
+  &.small-hero-section {
+    height: 220px;
+    background-position: bottom;
+  }
+}
